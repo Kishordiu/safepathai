@@ -1,43 +1,40 @@
-# SafePath AI
+# SAFEPATH AI
 
-> **An AI-assisted exploration of safer, context-aware journeys.**
+![Cinematic hero](https://capsule-render.vercel.app/api?type=rect&color=0:070707,100:171717&height=230&text=SAFEPATH%20AI&fontColor=F3F3EE&fontSize=40&fontAlignY=38&desc=AI%20%2F%20SAFER%20JOURNEYS&descColor=999991&descSize=12&descAlignY=66&animation=fadeIn)
 
-SafePath AI is a prototype exploring the intersection of location intelligence, AI-assisted reasoning and safety-oriented user experiences.
+> **AI / SAFER JOURNEYS.**
 
-## Highlights
+## THE PREMISE
 
-- AI-ready application architecture
-- Location and map-oriented workflows
-- Responsive modern interface
-- Supabase integration layer
-- Reusable component system
+SafePath AI explores a safety-first journey assistant where location context and AI reasoning work together instead of treating navigation as the whole product.
 
-## Stack
+## THE EXPERIENCE
 
-React 18 · TypeScript · Vite · Tailwind CSS · Supabase · Leaflet · React Leaflet · Recharts
+**A route is more than a line on a map.**  
+**Risk context should be explainable.**  
+**AI should assist the journey, not obscure it.**
 
-## Run locally
+## THE SYSTEM
+
+React and TypeScript form the product surface; Leaflet handles map workflows, Recharts supports visual signals, and Supabase provides the integration boundary for future intelligent services.
+
+## THE STACK
+
+React 18 · TypeScript · Vite · Supabase · Leaflet · Recharts · Tailwind CSS
+
+## RUN
 
 ```bash
 npm install
 npm run dev
 ```
 
-Build:
+## PROJECT STATE
 
-```bash
-npm run build
-npm run preview
-```
+**AI-assisted safety prototype**
 
-## Status
-
-**Prototype / active experimentation**
-
-## Author
-
-**K. Kishor Kumar** · [GitHub @Kishordiu](https://github.com/Kishordiu)
+Implemented behaviour is documented separately from future integrations so the project story stays honest as the product evolves.
 
 ---
 
-<p align="center">Building technology for safer movement.</p>
+<p align="center"><strong>K. KISHOR KUMAR</strong><br><sub>ENGINEERING / PRODUCT / SYSTEMS</sub></p>
