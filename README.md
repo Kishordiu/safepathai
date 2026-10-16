@@ -1,40 +1,58 @@
-# SAFEPATH AI
+# SafePath AI
 
-![Cinematic hero](https://capsule-render.vercel.app/api?type=rect&color=0:070707,100:171717&height=230&text=SAFEPATH%20AI&fontColor=F3F3EE&fontSize=40&fontAlignY=38&desc=AI%20%2F%20SAFER%20JOURNEYS&descColor=999991&descSize=12&descAlignY=66&animation=fadeIn)
+An AI-assisted journey-safety prototype exploring how route context, maps and explainable risk signals can work together. The current codebase is a React/TypeScript web app with Leaflet and Supabase integration.
 
-> **AI / SAFER JOURNEYS.**
+> **Project status:** Prototype. Treat any risk indicators as experimental, not authoritative safety advice.
 
-## THE PREMISE
+## What it explores
 
-SafePath AI explores a safety-first journey assistant where location context and AI reasoning work together instead of treating navigation as the whole product.
+- Map and journey-context interfaces
+- Safety signals designed to be understandable
+- A product surface for future intelligent-service integrations
+- Supabase as the application data/integration boundary
 
-## THE EXPERIENCE
+See the source code for the exact functionality currently implemented; integrations described as future work are not assumed to be live.
 
-**A route is more than a line on a map.**  
-**Risk context should be explainable.**  
-**AI should assist the journey, not obscure it.**
+## Run locally
 
-## THE SYSTEM
-
-React and TypeScript form the product surface; Leaflet handles map workflows, Recharts supports visual signals, and Supabase provides the integration boundary for future intelligent services.
-
-## THE STACK
-
-React 18 · TypeScript · Vite · Supabase · Leaflet · Recharts · Tailwind CSS
-
-## RUN
+**Requirements:** Node.js 20 or newer and npm.
 
 ```bash
-npm install
+npm ci
+cp .env.example .env
 npm run dev
 ```
 
-## PROJECT STATE
+Vite will print the local development URL in the terminal.
 
-**AI-assisted safety prototype**
+## Environment
 
-Implemented behaviour is documented separately from future integrations so the project story stays honest as the product evolves.
+Set these in your local `.env` file:
+
+| Variable | Purpose |
+| --- | --- |
+| `VITE_SUPABASE_URL` | Your Supabase project URL |
+| `VITE_SUPABASE_ANON_KEY` | Your Supabase publishable/anon client key |
+
+Vite variables are included in browser code. Use only the intended public anon/publishable key here; **never** put a Supabase service-role key or private provider secret in a `VITE_*` variable. Protect data with appropriate Supabase Row Level Security (RLS) policies.
+
+## Quality checks
+
+```bash
+npm run build
+npm run lint
+npm run test
+```
+
+The test command runs Vitest. A green build or test run should be recorded only after running it against the current commit.
+
+## Stack
+
+React · TypeScript · Vite · Supabase · Leaflet · Recharts · Tailwind CSS · Vitest
+
+## Project notes
+
+This repository contains a prototype, not a guarantee of real-world safety outcomes. Test any integrations with non-sensitive data first.
 
 ---
-
-<p align="center"><strong>K. KISHOR KUMAR</strong><br><sub>ENGINEERING / PRODUCT / SYSTEMS</sub></p>
+Maintained by [K. Kishor Kumar](https://github.com/Kishordiu).
