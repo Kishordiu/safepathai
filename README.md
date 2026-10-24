@@ -1,60 +1,58 @@
 ![SafePath AI — bespoke brushed-metal project artwork](./assets/readme-metal-hero.svg)
 
-# SafePath AI
+# SAFEPATH AI
 
-An AI-assisted journey-safety prototype exploring how route context, maps and explainable risk signals can work together. The current codebase is a React/TypeScript web app with Leaflet and Supabase integration.
+**An explainable journey-safety interface prototype for exploring routes, context, and incident review.**
 
-> **Project status:** Prototype. Treat any risk indicators as experimental, not authoritative safety advice.
+SafePath AI presents a product concept for parent and school workflows around journeys: route context, expected travel windows, safety states, and a clear explanation of why an event might deserve attention. The repository contains a React/TypeScript frontend and Supabase client dependency, but the landing-page descriptions do not establish that wearable feeds, child location, SMS/email/call services, or a validated risk model are connected.
 
-## What it explores
+## Product model
 
-- Map and journey-context interfaces
-- Safety signals designed to be understandable
-- A product surface for future intelligent-service integrations
-- Supabase as the application data/integration boundary
+```text
+Journey context (proposed input)
+           │
+           ▼
+Route / timing comparison
+           │
+           ▼
+Explainable safety state
+           │
+           ▼
+Parent / school review interface
+           │
+           ▼
+Escalation adapter (requires implementation)
+```
 
-See the source code for the exact functionality currently implemented; integrations described as future work are not assumed to be live.
+## What the interface explores
+
+- **Route context:** A way to present a usual route, travel window, and point of interest.
+- **Explainable indicators:** Show what inputs might contribute to a warning rather than exposing an unexplained score.
+- **Parent and school roles:** Explore different views for family and school workflows.
+- **Incident review:** Keep a clear place for the reason, severity, and status of a concern.
+
+## Stack
+
+React · TypeScript · Vite · React Router · Leaflet / React Leaflet · Supabase client
 
 ## Run locally
 
-**Requirements:** Node.js 20 or newer and npm.
+**Requirements:** Node.js and npm.
 
 ```bash
+git clone https://github.com/Kishordiu/safepathai.git
+cd safepathai
 npm ci
 cp .env.example .env
 npm run dev
 ```
 
-Vite will print the local development URL in the terminal.
+Run `npm run lint`, `npm test`, and `npm run build` for the available project checks.
 
-## Environment
+## Safety, privacy, and status
 
-Set these in your local `.env` file:
-
-| Variable | Purpose |
-| --- | --- |
-| `VITE_SUPABASE_URL` | Your Supabase project URL |
-| `VITE_SUPABASE_ANON_KEY` | Your Supabase publishable/anon client key |
-
-Vite variables are included in browser code. Use only the intended public anon/publishable key here; **never** put a Supabase service-role key or private provider secret in a `VITE_*` variable. Protect data with appropriate Supabase Row Level Security (RLS) policies.
-
-## Quality checks
-
-```bash
-npm run build
-npm run lint
-npm run test
-```
-
-The test command runs Vitest. A green build or test run should be recorded only after running it against the current commit.
-
-## Stack
-
-React · TypeScript · Vite · Supabase · Leaflet · Recharts · Tailwind CSS · Vitest
-
-## Project notes
-
-This repository contains a prototype, not a guarantee of real-world safety outcomes. Test any integrations with non-sensitive data first.
+**Prototype only — not a child-tracking or emergency-response service.** Do not rely on this app for live GPS, wearable sensing, geofence alerts, or emergency escalation. The README does not claim those integrations have been validated. Do not input real children's location or personal information into an unreviewed deployment. Any real-world version would need safeguarding design, lawful consent, strict role-based access, security and privacy testing, field validation, and fallback procedures that do not depend on this app alone.
 
 ---
-Maintained by [K. Kishor Kumar](https://github.com/Kishordiu).
+
+<p align="center"><sub>DIU FOUNDRY · ROUTE CONTEXT / EXPLAINABLE SAFETY</sub></p>
