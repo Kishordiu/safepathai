@@ -1,4 +1,4 @@
-# SafePath AI
+![SafePath AI — bespoke brushed-metal project artwork](./assets/readme-metal-hero.svg)
 
 An AI-assisted journey-safety prototype exploring how route context, maps and explainable risk signals can work together. The current codebase is a React/TypeScript web app with Leaflet and Supabase integration.
 
